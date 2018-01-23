@@ -19,7 +19,7 @@
 	font-family: Sanseriffic; src: url("sanseriffic/Sanseriffic.otf")
 }
     
-.star1 {
+#star1 {
     position: absolute;
     top:3px;
     left:100px;
@@ -27,7 +27,7 @@
     display: block;
 }
 
-.star2 {
+#star2 {
     position: absolute;
     top:3px;
     left:100px;
@@ -35,7 +35,15 @@
     display: block;
 }
 
-.star3 {
+#star3 {
+    top:3px;
+   position: absolute;
+    left: 100px;
+    width: 100%;
+    display: block;
+}
+
+#star4 {
     top:3px;
    position: absolute;
     left: 100px;
@@ -331,7 +339,7 @@ h1#namn {
 
 
 @media (min-width:1000px){
-    .star1 {
+    #star1 {
     position: absolute;
     top:3px;
     left:100px;
@@ -339,7 +347,7 @@ h1#namn {
     display: none;
 }
 
-.star2 {
+#star2 {
     position: absolute;
     top:3px;
     left:100px;
@@ -347,12 +355,17 @@ h1#namn {
     display: none;
 }
 
-.star3 {
+#star3 {
     top:3px;
    position: absolute;
     left: 100px;
     width: 100%;
     display: none;
 }
+    
+    #star4{
+            display: none;
+
+    }
 }
 
