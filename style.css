@@ -1,4 +1,4 @@
-*{
+* {
 	margin:0;
 	padding: 0;
 	font-family: Raleway;
@@ -24,13 +24,15 @@
     top:3px;
     left:100px;
     width: 100%;
+    display: block;
 }
 
 .star2 {
     position: absolute;
     top:3px;
-  left:100px;
+    left:100px;
     width: 100%;
+    display: block;
 }
 
 .star3 {
@@ -38,11 +40,15 @@
    position: absolute;
     left: 100px;
     width: 100%;
+    display: block;
 }
+
 .fa{
     color:rgba(255,255,255,0.8);
     font-size: 1.3em;
 }
+
+
 
 
 body {
@@ -106,21 +112,25 @@ body {
 
 #container {
     position: relative;
-    top:70px;
+    top:250px;
     display: flex;
     margin: auto;
     width:80%;
-    height: 500px;
         background:rgba(0,0,0,0.1);
+    display: ;
+    color:rgba(255,255,255,0.8);
     margin-bottom: 50px;
-    display: none;
+    overflow: hidden;
+    height: 0;
+    transition-property: height;
+    transition-duration: 1s;
 }
 
 
 #container div#forsta {
     position: absolute;
     width:100%;
-  background: rgba(248, 98, 84,0.7);
+  background: #C06C84;
     height: 10px;
     transform: skewX(-20deg);
         
@@ -129,7 +139,7 @@ body {
 #container div#andra {
     position: absolute;
     width:100%;
-   background: rgba(248, 98, 84,0.7);
+   background:#C06C84;
     height: 10px;
     bottom:0;
     transform: skewX(-20deg);
@@ -137,13 +147,19 @@ body {
 }
 
 #container p {
-   
-    margin-top:30px;
-    padding: 20px;
-    text-align: center
+       padding: 20px;
+    text-align: center;
     
 	
 }
+
+#projectsContainer, #aboutContainer, #contactContainer{
+    
+    display: none;
+    
+}
+
+
 #about{
 	position: relative;
 	padding-right: 120px;
@@ -303,7 +319,7 @@ h1 {
 h1#frontend{
 	font-family: Sanseriffic;
 	margin-top: 50px;
-			color:rgba(255,255,255,0.7);
+    color:rgba(255,255,255,0.7);
 	background: rgba(69, 50, 70,0.5);
 
 ;
@@ -312,3 +328,31 @@ h1#frontend{
 h1#namn {
 	font-family: Hijrnotes;
 }
+
+
+@media (min-width:1000px){
+    .star1 {
+    position: absolute;
+    top:3px;
+    left:100px;
+    width: 100%;
+    display: none;
+}
+
+.star2 {
+    position: absolute;
+    top:3px;
+    left:100px;
+    width: 100%;
+    display: none;
+}
+
+.star3 {
+    top:3px;
+   position: absolute;
+    left: 100px;
+    width: 100%;
+    display: none;
+}
+}
+
