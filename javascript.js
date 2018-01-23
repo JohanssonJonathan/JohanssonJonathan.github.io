@@ -16,6 +16,17 @@ window.addEventListener("load", function(){
     let aboutContainer = document.getElementById("aboutContainer")
     let projectContainer = document.getElementById("projectContainer")
     let contactContainer = document.getElementById("contactContainer")
+    let html = document.getElementById("html")
+    let css = document.getElementById("css")
+    let javascript = document.getElementById("javascript")
+    let react = document.getElementById("react")
+    
+    let htmlStar = document.getElementById("star1")
+    let cssStar = document.getElementById("star2")
+    let javascriptStar = document.getElementById("star3")
+    let reactStar = document.getElementById("star4")
+    
+    
     frontend.style.opacity = "1";
     headerContent.style.top = "120px";
     meny.style.width = "120%";
@@ -48,6 +59,55 @@ window.addEventListener("load", function(){
         
     });
 
+    if(window.innerWidth > 1000){
+    html.addEventListener("mouseenter", function(){
+        
+        htmlStar.style.display = "block"
+        cssStar.style.display = "none"
+        javascriptStar.style.display = "none"
+          reactStar.style.display = "none"
+        html.addEventListener("mouseleave", function(){
+            htmlStar.style.display = "none"
+        })
+        
+    })
+     css.addEventListener("mouseenter", function(){
+        
+                cssStar.style.display = "block"
+         htmlStar.style.display = "none"
+          javascriptStar.style.display = "none"
+          reactStar.style.display = "none"
+         
+          css.addEventListener("mouseleave", function(){
+            cssStar.style.display = "none"
+        })
+
+    })
+     javascript.addEventListener("mouseenter", function(){
+                javascriptStar.style.display = "block"
+           cssStar.style.display = "none"
+         htmlStar.style.display = "none"
+          reactStar.style.display = "none"
+          javascript.addEventListener("mouseleave", function(){
+            javascriptStar.style.display = "none"
+        })
+
+        
+    })
+     react.addEventListener("mouseenter", function(){
+                reactStar.style.display = "block"
+          javascriptStar.style.display = "none"
+           cssStar.style.display = "none"
+         htmlStar.style.display = "none"
+         
+          react.addEventListener("mouseleave", function(){
+            reactStar.style.display = "none"
+        })
+
+        
+    })
+        
+    }
     
 //*************************************************
 //*************** CLICK *****************************
