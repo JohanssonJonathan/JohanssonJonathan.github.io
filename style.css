@@ -18,7 +18,7 @@
 
 	font-family: Sanseriffic; src: url("sanseriffic/Sanseriffic.otf")
 }
-    
+
 #star1 {
     position: absolute;
     top:3px;
@@ -54,44 +54,45 @@
 .fa{
     color:rgba(255,255,255,0.8);
     font-size: 1.3em;
+		display: none;
 }
 
 
 
 
 body {
-    
-    background: url("Bilder/zig zag wool.png")
+
+    background: url("Bilder/background.png"); /*url("Bilder/zig zag wool.png")*/
+		background-size:cover;
+		background-repeat: no-repeat;
 }
 
 .headerContent{
 	position: relative;
 	top:200px;
-    width:450px;
+    width:160px;
     margin: auto;
-    transition-property: top;
-    transition-delay: 2s;
-    transition-duration: 2s;
+	font-size: 0.5em;
 }
 
-.headerContent img { 
+.headerContent img {
 	position: relative;
 	display: block;
 	margin:auto;
-	width: 450px;
+	width: 160px;
 	border-radius: 100%;
 	z-index: 2;
-	box-shadow: 0 0 0px 10px #C06C84;
+	box-shadow: 0 0 0px 5px #F5FF00/*#C06C84*/;
     transition-property: box-shadow;
     transition-duration: 0.5s;
 }
 
 .headerContent ul.meny{
-	top:180px;
+	top:40px;
 	right: 0;
-	width: 60%;;
+	width: 40%;;
 	position: absolute;
-    margin-right: 50px;
+    margin-right: 80px;
     transition-property: width;
     transition-duration: 1s;
 }
@@ -99,15 +100,20 @@ body {
 .headerContent ul.meny li{
 	position: relative;
 	display: block;
-	padding: 20px 0;
+	padding: 10px 0;
     text-align: left;
     padding-left: 30px;
-    
+
+}
+
+.meny a{
+	padding:20px 0 ;
+	padding-right: 40px;
 }
 
 #shine{
-    width:450px;
-    height: 450px;
+    width:160px;
+    height: 160px;
     background: rgba(255,255,255,0.8);
     box-shadow: 0 0 900px 10px rgba(255,255,255,0.3);
     z-index: -1;
@@ -141,7 +147,7 @@ body {
   background: #C06C84;
     height: 10px;
     transform: skewX(-20deg);
-        
+
 }
 
 #container div#andra {
@@ -151,42 +157,47 @@ body {
     height: 10px;
     bottom:0;
     transform: skewX(-20deg);
-        
+
 }
 
 #container p {
        padding: 20px;
     text-align: center;
-    
-	
+
+
 }
 
 #projectsContainer, #aboutContainer, #contactContainer{
-    
+
     display: none;
-    
+
 }
 
 
 #about{
 	position: relative;
 	padding-right: 120px;
-	background: #C06C84;
+	background: #F5FF00;/*#C06C84;*/
     transform: skewX(-10deg);
     transition: transform;
     transition-duration: 0.4s;
-        
+
 }
 
 #about:hover {
-    transform: translateX(-20px) skewX(-10deg)
+    transform: translateX(-20px) skewX(-10deg);
+		color:rgba(255,255,255,0.7)
 }
 
 #projects:hover {
-    transform: translateX(-20px) skewX(10deg)
+    transform: translateX(-20px) skewX(10deg);
+		color:rgba(255,255,255,0.7)
+
 }
 #contact:hover {
-    transform: translateX(-20px) skewX(-10deg)
+    transform: translateX(-20px) skewX(-10deg);
+			color:rgba(255,255,255,0.7);
+
 }
 
 
@@ -194,7 +205,7 @@ body {
 
 #projects{
 	padding-right: 130px;
-	background: #F67280;
+	background: rgba(0,0,0,0.2); /*#F67280;*/
         transform: skewX(10deg);
     transform-style: background;
      transition: transform;
@@ -205,7 +216,7 @@ body {
 
 #contact{
 	padding-right: 110px;
-	background: #F8B195;
+	background: rgba(0,0,0,0.2) /*#F8B195*/;
         transform: skewX(-10deg);
              transition-property: transform;
     transition-duration: 0.4s;
@@ -214,12 +225,11 @@ body {
 
 .skills{
 	position: absolute;
-	top:60px;
-	left:40px;
-    margin-left: 50px;
-        box-shadow: 0 0 20px white;
+	top:20px;
+	left:20px;
+    margin-left: 0px;
 
-    
+
 }
 
 
@@ -233,20 +243,21 @@ body {
     padding-right: 20px;
     font-size: 0.8em;
 
-	color:rgba(255,255,255,0.8);
- 
+	color:rgba(255,255,255,0.5);
+
 }
 
 #html{
     width: 0%;
-	padding-left:80px;
+	padding-left:90px;
 	background: red;
-	background: #C06C84;
+	background: rgba(255,255,255,0.2) /*#C06C84*/;
        transition-property: width;
     transition-duration: .6s;
     transition-delay: 0.5s;
-    
-    transition-timing-function: ease-in-out
+
+    transition-timing-function: ease-in-out;
+
 }
 
 #css{
@@ -256,8 +267,10 @@ body {
     transition-duration: 0.6s;
     transition-delay: 1s;
 	background: green;
-	background: #F67280;
-        transition-timing-function: ease-in-out
+	/* background: #F67280; */
+	background: rgba(255,255,255,0.2);
+        transition-timing-function: ease-in-out;
+
 
 }
 
@@ -267,25 +280,30 @@ body {
     width: 0%;
       transition-property: width;
     transition-duration: 0.6s;
-	padding-left: 120px;
-	background: #F8B195;
+	padding-left: 90px;
+	/* background: #F8B195; */
+	background: rgba(255,255,255,0.2);
         transition-timing-function: ease-in-out;
 
     transition-delay: 1.5s;
+
 }
 
 #react{
     width: 0%;
       transition-property: width;
     transition-duration: 0.6s;
-	padding-left: 130px;
-	background:#65799B;
+	padding-left: 90px;
+	/* background:#65799B; */
+	background: rgba(255,255,255,0.2);
         transition-timing-function: ease-in-out;
 
     transition-delay: 2s;
+
 }
 a {
-	color:rgba(255,255,255,0.8);
+	color:white;
+	text-shadow: 0 0 5px rgba(0,0,0,0.6);
 	text-decoration: none;
 }
 
@@ -301,17 +319,19 @@ header{
 #frontend{
     position: relative;
     top:200px;
-    color:rgba(255,255,255,0.6);
+    color:rgba(255,255,255,0.9);
     display: block;
     margin: auto;
     text-align: center;
-    width:300px;
+    width:500px;
     padding:20px;
-    border:2px solid rgba(255,255,255,0.6);
+    border:2px solid rgba(255,255,255,0.9);
     opacity: 0;
     transition-property: opacity;
     transition-delay: 4s;
     transition-duration: 1s;
+		font-size: 0.7em;
+		display: none;
 }
 
 h1 {
@@ -338,7 +358,47 @@ h1#namn {
 }
 
 
-@media (min-width:1000px){
+@media (min-width:500px){
+
+
+	.headerContent img {
+
+		width: 250px;
+
+	}
+
+
+	.headerContent{
+
+	    width:250px;
+
+	}
+
+	.skills{
+		left:95px;
+	}
+
+
+
+	.skills li {
+
+		color:rgba(255,255,255,0.8);
+
+	}
+
+	.headerContent ul.meny{
+		top:100px;
+		font-size: 1.3em;
+
+
+
+	}
+
+#shine {
+	width:250px;
+	height: 250px;
+}
+
     #star1 {
     position: absolute;
     top:3px;
@@ -362,10 +422,57 @@ h1#namn {
     width: 100%;
     display: none;
 }
-    
+
     #star4{
             display: none;
 
     }
 }
 
+@media (min-width:700px){
+
+	.headerContent img {
+
+		width: 450px;
+
+	}
+
+
+	.headerContent{
+
+	    width:450px;
+
+	}
+
+	.skills{
+		left:220px;
+	}
+
+	.skills li {
+		font-size: 1.4em;
+	}
+
+
+	.headerContent ul.meny{
+		top:260px;
+		font-size: 1.5em;
+		padding-right: 60px;
+
+
+
+	}
+
+	.headerContent ul.meny li{
+		position: relative;
+		display: block;
+		padding: 20px 0;
+	    text-align: left;
+	    padding-left: 50px;
+
+	}
+
+	.meny a{
+		padding:20px 0 ;
+		padding-right: 40px;
+	}
+}
