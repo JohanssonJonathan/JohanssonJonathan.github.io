@@ -73,7 +73,7 @@ function Screen(){
   }
 
 }
-
+  normalScreen()
   Screen()
     window.addEventListener("resize",function(){
 
@@ -150,6 +150,7 @@ function Screen(){
         about.style.backgroundColor = "#F5FF00";
         projects.style.backgroundColor = "rgba(0,0,0,0.2)";
         contact.style.backgroundColor = "rgba(0,0,0,0.2)";
+
 
     });
 
@@ -258,8 +259,8 @@ function Screen(){
 
         e.preventDefault();
 
-         containerDivForsta.style.backgroundColor = "#C06C84"
-        containerDivAndra.style.backgroundColor = "#C06C84"
+        //  containerDivForsta.style.backgroundColor = "#F5FF00"
+        // containerDivAndra.style.backgroundColor = "#F5FF00"
 
 
         if(aboutBlock){
@@ -268,7 +269,7 @@ function Screen(){
 
         }else{
             aboutContainer.style.display = "block";
-            container.style.height = "250px";
+            container.style.height = "100px";
 
             aboutBlock = true; // block
             projectsBlock = false; // block
@@ -288,11 +289,11 @@ function Screen(){
     projects.addEventListener("click", function(e){
          e.preventDefault();
 
-         projects.style.background = "red";
+         projects.style.background = "#FF005F";
          profil.style.boxShadow = "0 0 0 5px #FF005F ";
 
-        containerDivForsta.style.backgroundColor = "#F67280"
-        containerDivAndra.style.backgroundColor = "#F67280"
+        // containerDivForsta.style.backgroundColor = "#FF005F"
+        // containerDivAndra.style.backgroundColor = "#FF005F"
 
          console.log("aboutBlock: " + aboutBlock);
         console.log("projectsBlock :" + projectsBlock)
@@ -324,8 +325,8 @@ function Screen(){
 
     contact.addEventListener("click", function(e){
          e.preventDefault();
-        containerDivForsta.style.backgroundColor = "#F8B195"
-        containerDivAndra.style.backgroundColor = "#F8B195"
+        // containerDivForsta.style.backgroundColor = "#56C600"
+        // containerDivAndra.style.backgroundColor = "#56C600"
 
          console.log("aboutBlock: " + aboutBlock);
         console.log("projectsBlock :" + projectsBlock)
