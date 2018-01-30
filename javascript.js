@@ -27,334 +27,265 @@ window.addEventListener("load", function(){
     let javascriptStar = document.getElementById("star3")
     let reactStar = document.getElementById("star4")
 
+    let sida = 1;
+
+
 
     frontend.style.opacity = "1";
     headerContent.style.top = "120px";
     meny.style.width = "100%";
 
 
-  // function MediaLitenScreen(){
 
-  function normalScreen(){
-    for(let i =0; i< skills.length; i++){
+/***************************************************************
+***** Elementens storlek beroende på skärmstorlek ************************************
+************************************************************/
 
+function forloop(val1, val2, val3){ // Elementen ändras beroende på hur stor skärmen är.
+  for(let i =0; i< skills.length; i++){
 
-        if(i === 2)
-        skills[i].style.width = "70%"
-        else if(i  > 1){
-          skills[i].style.width = "80%"
+      if(i === 2)
+      skills[i].style.width = val1/*"70%"*/
+      else if(i  > 1){
+        skills[i].style.width = val2/*"80%"*/
 
-        }
-        else {
-          skills[i].style.width = "50%"
+      }
+      else {
+        skills[i].style.width = val3 /*"50%"*/
 
-        }
-    }
+      }
+  }
+}
+
+function normalScreen(){
+    forloop("70%", "80%","50%")
 }
 
 function Screen(){
 
   if(window.innerWidth > 700){
 
-    for(let i =0; i< skills.length; i++){
-
-
-        if(i === 2)
-        skills[i].style.width = "100%"
-        else if(i  > 1){
-          skills[i].style.width = "110%"
-
-        }
-        else {
-          skills[i].style.width = "80%"
-
-        }
-    }
-  }
+    forloop("100%", "110%", "80%")
 
 }
-  normalScreen()
-  Screen()
+
+}
+  normalScreen() // Om anvädaren inte resizar fönstret utan kommer in på ett speciellt mått när man relodar.
+  Screen()// Om anvädaren inte resizar fönstret utan kommer in på ett speciellt mått när man relodar.
+
+
+
+  //Om användaren rezisar fönstret
     window.addEventListener("resize",function(){
 
         if(window.innerWidth>700){
 
-            Screen()
+            Screen() // Skickas till en function som i sin tur skickar vidare den till en loop med speciella värden för det måttet
 
         }else{
 
-            normalScreen()
+            normalScreen() //Skickar värden till en funktion som loopar igenom
+
         }
 
     })
-  // }
-  //
-  // function MediaStorstScreen(){
-  //
-  //
-  //       skillsDiv.style.left = "200px"
-  //
-  // }
-  //
-  //   function MediaStorreScreen(){
-  //
-  //     for(let i =0; i< skills.length; i++){
-  //
-  //
-  //         if(i === 2)
-  //         skills[i].style.width = "120%"
-  //         else if(i  > 1){
-  //           skills[i].style.width = "130%"
-  //
-  //         }
-  //         else {
-  //           skills[i].style.width = "100%"
-  //
-  //         }
-  //     }
-  //
-  //   }
-  //
-  //   if(window.innerWidth>500){
-  //     MediaStorreScreen()
-  //   }else if(window.innerWidth < 500){
-  //     MediaLitenScreen()
-  //   }
-  //
-  //   window.addEventListener("resize", function() {
-  //
-  //     if(window.innerWidth > 500){
-  //
-  //         MediaStorreScreen()
-  //     }else if(window.innerWidth < 500){
-  //
-  //       MediaLitenScreen()
-  //     }else if(window.innerWidth > 700){
-  //
-  //       MediaStorstScreen()
-  //     }
-  //
-  //
-  //   });
 
 
-//********************************************
-//***************** MOUSEENTER ******************
-//*********************************************
 
-    about.addEventListener("mouseenter", function(){
-
-        // profil.style.boxShadow = "0 0 0px 10px #F5FF00";
-        profil.style.boxShadow = "0 0 0px 5px  #F5FF00"
-
-        about.style.backgroundColor = "#F5FF00";
-        projects.style.backgroundColor = "rgba(0,0,0,0.2)";
-        contact.style.backgroundColor = "rgba(0,0,0,0.2)";
-
-
-    });
-
-    projects.addEventListener("mouseenter", function(){
-
-          profil.style.boxShadow = "0 0 0 5px  #FF005F";
-          projects.style.backgroundColor = "#FF005F"
-
-          about.style.backgroundColor = "rgba(0,0,0,0.2)"
-          contact.style.backgroundColor = "rgba(0,0,0,0.2)"
-        // profil.style.boxShadow = "0 0 0px 10px #F67280"
-    });
-
-    contact.addEventListener("mouseenter", function(){
-
-        contact.style.backgroundColor = "#56C600"
-
-        profil.style.boxShadow = "0 0 0 5px  #56C600";
-        about.style.backgroundColor = "rgba(0,0,0,0.2)"
-        projects.style.backgroundColor = "rgba(0,0,0,0.2)";
-
-        // profil.style.boxShadow = "0 0 0px 10px #F8B195"
-
-    });
-
-
-    function display(skill){
-      if(skill === htmlStar){
-        htmlStar.style.display = "block"
-        cssStar.style.display = "none"
-        javascriptStar.style.display = "none"
-        reactStar.style.display = "none"
-      }else if( skill === cssStar){
-        cssStar.style.display = "block"
-       htmlStar.style.display = "none"
-        javascriptStar.style.display = "none"
-        reactStar.style.display = "none"
-      }else if( skill === javascriptStar){
-          javascriptStar.style.display = "block"
-         cssStar.style.display = "none"
-         htmlStar.style.display = "none"
-        reactStar.style.display = "none"
-      }else if(skill === reactStar){
-              reactStar.style.display = "block"
-        javascriptStar.style.display = "none"
-         cssStar.style.display = "none"
-       htmlStar.style.display = "none"
-      }
-
-
-    }
-
-    if(window.innerWidth > 1000){
-
-      html.addEventListener("mouseenter", function(){
-
-
-          display(htmlStar)
-
-          html.addEventListener("mouseleave", function(){
-              htmlStar.style.display = "none"
-          })
-
-      })
-       css.addEventListener("mouseenter", function(){
-
-            display(cssStar)
-            css.addEventListener("mouseleave", function(){
-              cssStar.style.display = "none"
-          })
-
-      })
-       javascript.addEventListener("mouseenter", function(){
-
-          display(javascriptStar)
-            javascript.addEventListener("mouseleave", function(){
-              javascriptStar.style.display = "none"
-          })
-
-
-      })
-       react.addEventListener("mouseenter", function(){
-
-          display(reactStar)
-
-            react.addEventListener("mouseleave", function(){
-              reactStar.style.display = "none"
-          })
-
-
-      })
-
-    }
 
 //*************************************************
-//*************** CLICK *****************************
+//*************** CLICK PÅ ABOUT, PROJECTS och CONTACT *****************************
 //***********************************************
 
-    let aboutBlock = false; // none
-    let projectsBlock = false;
-    let contactBlock = false;
+
+about.addEventListener("click", function(e){
+    e.preventDefault();
+      sida = 1;
+      sidan()
+});
+
+projects.addEventListener("click", function(e){
+     e.preventDefault();
+    sida = 2;
+    sidan()
+  })
+
+contact.addEventListener("click", function(e){
+     e.preventDefault();
+     sida = 3;
+     sidan()
+
+})
+
+// För att se vilket content som syns eller inte.
+
+let aboutBlock = true; // Content Syns
+let projectsBlock = false; // Content syns inte
+let contactBlock = false;//content syns inte
 
 
 
-    about.addEventListener("click", function(e){
+    function sidan(){
+      if(sida === 1){
+          about.style.background = "#FFE100"
+          profil.style.boxShadow = "0 0 0 5px  #FFE100";
 
-        e.preventDefault();
+          projects.style.background =" rgba(0,0,0,0.2)"
+          contact.style.background =" rgba(0,0,0,0.2)"
 
-        //  containerDivForsta.style.backgroundColor = "#F5FF00"
-        // containerDivAndra.style.backgroundColor = "#F5FF00"
+          if(aboutBlock){
+              container.style.height = "0";
+              aboutBlock = false;
+
+          }else{
+
+               blockBool()
+
+          }
 
 
-        if(aboutBlock){
-                        container.style.height = "0";
-                        aboutBlock = false;
+      }else if(sida===2){
+          projects.style.background ="#FF005F"
+                profil.style.boxShadow = "0 0 0 5px  #FF005F";
 
-        }else{
-            aboutContainer.style.display = "block";
-            container.style.height = "100px";
+                about.style.background =" rgba(0,0,0,0.2)"
+                contact.style.background =" rgba(0,0,0,0.2)"
 
+
+                if(projectsBlock){
+                   container.style.height = "0";
+                   projectsBlock = false;
+                   projectsContainer.style.display = "none";
+               }else{
+                   blockBool()
+
+                }
+      }else{
+
+        contact.style.background = "#56C600"
+              profil.style.boxShadow = "0 0 0 5px  #56C600";
+
+              projects.style.background =" rgba(0,0,0,0.2)"
+              about.style.background =" rgba(0,0,0,0.2)"
+
+              if(contactBlock){
+                  container.style.height = "0";
+                 contactBlock = false
+
+
+            }else{
+                blockBool()
+
+
+            }
+
+      }
+    }
+
+
+
+
+
+        function blockBool(){
+          if(sida === 1){
             aboutBlock = true; // block
             projectsBlock = false; // block
             contactBlock = false; // none
-
+            aboutContainer.style.display = "block";
+            container.style.height = "100px";
             projectsContainer.style.display = "none";
             contactContainer.style.display = "none";
 
 
-
-
-
-        }
-
-    });
-
-    projects.addEventListener("click", function(e){
-         e.preventDefault();
-
-         projects.style.background = "#FF005F";
-         profil.style.boxShadow = "0 0 0 5px #FF005F ";
-
-        // containerDivForsta.style.backgroundColor = "#FF005F"
-        // containerDivAndra.style.backgroundColor = "#FF005F"
-
-         console.log("aboutBlock: " + aboutBlock);
-        console.log("projectsBlock :" + projectsBlock)
-        console.log("contactBlock: " + contactBlock)
-
-         if(projectsBlock){
-                        container.style.height = "0";
-                        projectsBlock = false;
-                        projectsContainer.style.display = "none";
-
-
-        }else{
-            projectsContainer.style.display = "block";
-            container.style.height = "250px";
-
+          }else if(sida === 2){
             projectsBlock = true; // block
             aboutBlock = false; //none
             contactBlock = false; // none
-
+            projectsContainer.style.display = "block";
+            container.style.height = "250px";
             aboutContainer.style.display = "none";
             contactContainer.style.display = "none";
-
-
-        }
-
-
-
-    })
-
-    contact.addEventListener("click", function(e){
-         e.preventDefault();
-        // containerDivForsta.style.backgroundColor = "#56C600"
-        // containerDivAndra.style.backgroundColor = "#56C600"
-
-         console.log("aboutBlock: " + aboutBlock);
-        console.log("projectsBlock :" + projectsBlock)
-        console.log("contactBlock: " + contactBlock)
-
-          if(contactBlock){
-                        container.style.height = "0";
-                       contactBlock = false
-
-
-        }else{
-            contactContainer.style.display = "block";
-            container.style.height = "250px";
-
+          }else{
             contactBlock = true; // block
              aboutBlock = false; // none
             projectsBlock = false; // none
-
-                        aboutContainer.style.display = "none";
-                        projectsContainer.style.display = "none";
-
-
+            contactContainer.style.display = "block";
+            container.style.height = "250px";
+            aboutContainer.style.display = "none";
+            projectsContainer.style.display = "none";
+          }
         }
 
 
-    })
 
 
 
+
+
+    // function display(skill){
+    //   if(skill === htmlStar){
+    //     htmlStar.style.display = "block"
+    //     cssStar.style.display = "none"
+    //     javascriptStar.style.display = "none"
+    //     reactStar.style.display = "none"
+    //   }else if( skill === cssStar){
+    //     cssStar.style.display = "block"
+    //    htmlStar.style.display = "none"
+    //     javascriptStar.style.display = "none"
+    //     reactStar.style.display = "none"
+    //   }else if( skill === javascriptStar){
+    //       javascriptStar.style.display = "block"
+    //      cssStar.style.display = "none"
+    //      htmlStar.style.display = "none"
+    //     reactStar.style.display = "none"
+    //   }else if(skill === reactStar){
+    //           reactStar.style.display = "block"
+    //     javascriptStar.style.display = "none"
+    //      cssStar.style.display = "none"
+    //    htmlStar.style.display = "none"
+    //   }
+    // }
+    //
+    // if(window.innerWidth > 1000){
+    //
+    //   html.addEventListener("mouseenter", function(){
+    //
+    //
+    //       display(htmlStar)
+    //
+    //       html.addEventListener("mouseleave", function(){
+    //           htmlStar.style.display = "none"
+    //       })
+    //
+    //   })
+    //    css.addEventListener("mouseenter", function(){
+    //
+    //         display(cssStar)
+    //         css.addEventListener("mouseleave", function(){
+    //           cssStar.style.display = "none"
+    //       })
+    //
+    //   })
+    //    javascript.addEventListener("mouseenter", function(){
+    //
+    //       display(javascriptStar)
+    //         javascript.addEventListener("mouseleave", function(){
+    //           javascriptStar.style.display = "none"
+    //       })
+    //
+    //
+    //   })
+    //    react.addEventListener("mouseenter", function(){
+    //
+    //       display(reactStar)
+    //
+    //         react.addEventListener("mouseleave", function(){
+    //           reactStar.style.display = "none"
+    //       })
+    //
+    //
+    //   })
+    //
+    // }
 
 })
