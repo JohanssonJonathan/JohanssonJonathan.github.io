@@ -140,25 +140,24 @@ body {
 }
 
 
-#projectsContainer {
-	width: 100%;
-	justify-content: center;
-}
-#projectsContainer ul{
-		display: flex;
-		flex-direction: column;
+
+#projectsContainer h4{
+	margin-left: 10px;
+	padding-bottom: 2px;
+	margin-top: 10px;
+	display: inline-block;
+	border-bottom: 1px solid;
 }
 
-#projectsContainer li {
-	text-align: center;
-	list-style-type: none;
-
+.projects{
+	padding-left: 10px;
+	margin-top: 10px;
 }
-.projects {
 
-		margin: 10px;
-
+.projects li{
+	list-style: circle;
 }
+
 
 .ownProjects{
 	width: 100%;
@@ -193,17 +192,13 @@ body {
 
 }
 
-#container p {
-       padding: 20px;
-    text-align: center;
 
-
-}
 
 #projectsContainer, #aboutContainer, #contactContainer{
 
     display: none;
 	font-size: 0.7em;
+	width:100%;
 }
 
 

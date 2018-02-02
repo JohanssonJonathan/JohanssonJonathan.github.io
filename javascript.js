@@ -202,7 +202,7 @@ let contactBlock = false;//content syns inte
             projectsBlock = false; // block
             contactBlock = false; // none
             aboutContainer.style.display = "block";
-            container.style.height = "100px";
+            container.style.height = "";
             projectsContainer.style.display = "none";
             contactContainer.style.display = "none";
 
@@ -211,8 +211,8 @@ let contactBlock = false;//content syns inte
             projectsBlock = true; // block
             aboutBlock = false; //none
             contactBlock = false; // none
-            projectsContainer.style.display = "flex";
-            container.style.height = "250px";
+            projectsContainer.style.display = "block";
+            container.style.height = "300px";
             aboutContainer.style.display = "none";
             contactContainer.style.display = "none";
           }else{
