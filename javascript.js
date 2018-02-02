@@ -57,15 +57,15 @@ function forloop(val1, val2, val3){ // Elementen ändras beroende på hur stor s
   }
 }
 
-function normalScreen(){
-    forloop("70%", "80%","50%")
+function normalScreen(val1, val2, val3){
+    forloop(val1, val2, val3)
 }
 
-function Screen(){
+function Screen(val1, val2, val3){
 
   if(window.innerWidth > 700){
 
-    forloop("100%", "110%", "80%")
+    forloop(val1, val2, val3)
 
 }
 
@@ -74,17 +74,27 @@ function Screen(){
   Screen()// Om anvädaren inte resizar fönstret utan kommer in på ett speciellt mått när man relodar.
 
 
+  if(window.innerWidth>700){
+
+      Screen("100%","110%","80%") // Skickas till en function som i sin tur skickar vidare den till en loop med speciella värden för det måttet
+
+  }else{
+
+      normalScreen("70%", "80%","50%")//Skickar värden till en funktion som loopar igenom
+
+  }
+
 
   //Om användaren rezisar fönstret
     window.addEventListener("resize",function(){
 
         if(window.innerWidth>700){
 
-            Screen() // Skickas till en function som i sin tur skickar vidare den till en loop med speciella värden för det måttet
+            Screen("100%","110%","80%") // Skickas till en function som i sin tur skickar vidare den till en loop med speciella värden för det måttet
 
         }else{
 
-            normalScreen() //Skickar värden till en funktion som loopar igenom
+            normalScreen("70%", "80%","50%")//Skickar värden till en funktion som loopar igenom
 
         }
 
@@ -125,6 +135,7 @@ let contactBlock = false;//content syns inte
 
 
 
+
     function sidan(){
       if(sida === 1){
           about.style.background = "#FFE100"
@@ -155,7 +166,6 @@ let contactBlock = false;//content syns inte
                 if(projectsBlock){
                    container.style.height = "0";
                    projectsBlock = false;
-                   projectsContainer.style.display = "none";
                }else{
                    blockBool()
 
@@ -201,7 +211,7 @@ let contactBlock = false;//content syns inte
             projectsBlock = true; // block
             aboutBlock = false; //none
             contactBlock = false; // none
-            projectsContainer.style.display = "block";
+            projectsContainer.style.display = "flex";
             container.style.height = "250px";
             aboutContainer.style.display = "none";
             contactContainer.style.display = "none";

@@ -141,6 +141,39 @@ body {
 }
 
 
+#projectsContainer {
+	width: 100%;
+	justify-content: center;
+}
+#projectsContainer ul{
+		display: flex;
+		flex-direction: column;
+}
+
+#projectsContainer li {
+	text-align: center;
+	list-style-type: none;
+
+}
+.projects {
+
+		margin: 10px;
+
+}
+
+.ownProjects{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.ownProjects img{
+	margin:5px;
+	height: 60px;
+	float: left;
+	display:inline-block;
+}
+
 #container div#forsta {
     position: absolute;
     width:100%;
