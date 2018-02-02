@@ -68,8 +68,7 @@ body {
 }
 
 .headerContent{
-	position: relative;
-	top:200px;
+		position: relative;
     width:160px;
     margin: auto;
 	font-size: 0.5em;
@@ -126,10 +125,10 @@ body {
 
 #container {
     position: relative;
-    top:150px;
+    top:70px;
     display: flex;
     margin: auto;
-    width:80%;
+    width:100%;
         background:rgba(0,0,0,0.1);
     display: ;
     color:rgba(255,255,255,0.8);
@@ -367,7 +366,7 @@ header{
 
 #frontend{
     position: relative;
-    top:140px;
+    top:50px;
     color:rgba(255,255,255,0.9);
     display: block;
     margin: auto;

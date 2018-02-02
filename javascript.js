@@ -32,8 +32,8 @@ window.addEventListener("load", function(){
 
 
     frontend.style.opacity = "1";
-    headerContent.style.top = "120px";
-    meny.style.width = "100%";
+    headerContent.style.top = "20px";
+    meny.style.width = "85%";
 
 
 
