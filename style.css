@@ -158,9 +158,60 @@ body {
 }
 
 
+#contactContainer > div {
+		text-align: center;
+		width: 70%;
+		margin:auto;
+}
+
+#contactContainer li {
+	list-style-type: none;
+}
+
+#contactContainer h4 {
+	text-align: center;
+}
+
+#contactContainer h4:first-child{
+	margin-top: 10px;
+}
+#contactContainer input {
+	margin:10px auto;
+	display: block;
+	border: 5px;
+	padding:3px;
+	background-color: rgba(0,0,0,0);
+	border-bottom: 2px solid rgba(255,255,255,0.7);
+	color: rgba(255,255,255,0.8)
+
+}
+
+input:focus{
+	outline:none;
+}
+#contactContainer button {
+	background: rgba(255,255,255,0);
+	border:2px solid rgba(255,255,255,0.8);
+	padding:2px 10px;
+}
+textarea {
+	width:200px;
+	display: block;
+	margin: auto;
+	margin-bottom: 10px;
+	outline: none;
+	background: rgba(0,0,0,0.1);
+	color: rgba(255,255,255,0.8)
+}
+
+button{
+	background:white;
+	color:rgba(255,255,255,0.8)
+}
 
 .projects li{
-color:rgba(255,255,255,0.8)}
+color:rgba(255,255,255,0.8);
+list-style:none;}
 
 .projects h5 {
 	text-decoration: underline;
