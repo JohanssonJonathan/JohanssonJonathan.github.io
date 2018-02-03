@@ -212,7 +212,7 @@ let contactBlock = false;//content syns inte
             aboutBlock = false; //none
             contactBlock = false; // none
             projectsContainer.style.display = "block";
-            container.style.height = "225px";
+            container.style.height = "300px";
             aboutContainer.style.display = "none";
             contactContainer.style.display = "none";
           }else{
