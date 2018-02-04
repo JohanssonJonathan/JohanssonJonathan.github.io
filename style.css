@@ -70,6 +70,7 @@ body {
 .headerContent{
 		position: relative;
     width:160px;
+
     margin: auto;
 	font-size: 0.5em;
 }
@@ -420,7 +421,6 @@ header{
 
 #frontend{
     position: relative;
-    top:50px;
     color:rgba(255,255,255,0.9);
     display: block;
     margin: auto;
@@ -459,19 +459,33 @@ h1#namn {
 }
 
 
+@media (min-width:800px){
+
+	#container {
+		position: absolute;
+		width: 35%;
+		right: 50px;
+		top:250px;
+		font-size: 1.2em;
+
+
+	}
+}
+
 @media (min-width:500px){
 
 
 	.headerContent img {
 
 		width: 250px;
-
 	}
+
 
 
 	.headerContent{
 
 	    width:250px;
+			margin-top: 50px;
 
 	}
 
@@ -538,12 +552,21 @@ h1#namn {
     }
 }
 
-@media (min-width:700px){
+@media (min-width:800px){
 
 	.headerContent img {
 
 		width: 450px;
+		right:150px;
 
+	}
+
+	body{
+		margin-top: 50px;
+	}
+
+	#frontend {
+			margin-top: 100px;
 	}
 
 
@@ -554,7 +577,7 @@ h1#namn {
 	}
 
 	.skills{
-		left:220px;
+		left:120px;
 	}
 
 	.skills li {
@@ -566,7 +589,7 @@ h1#namn {
 		top:260px;
 		font-size: 1.5em;
 		padding-right: 60px;
-
+		right: 200px;
 
 
 	}
