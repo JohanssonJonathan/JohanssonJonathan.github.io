@@ -2,26 +2,6 @@ window.addEventListener("load", function(){
 
 
 
-// Initialize Firebase
-var config = {
-  apiKey: "AIzaSyCxJ8mK93AaiTDHSwmJI5aR4ad-fgzo-Js",
-  authDomain: "jonathanjohansson-69096.firebaseapp.com",
-  databaseURL: "https://jonathanjohansson-69096.firebaseio.com",
-  projectId: "jonathanjohansson-69096",
-  storageBucket: "",
-  messagingSenderId: "457637347025"
-};
-firebase.initializeApp(config);
-
-
-
-const db = firebase.database()
-
-
-  let obj = {
-    name:"jonathan"
-  }
-db.ref("/").push(obj)
 
     let headerContent = document.getElementsByClassName("headerContent")[0];
 
@@ -51,7 +31,76 @@ db.ref("/").push(obj)
 
     let sida = 1;
 
+    let firstName = document.getElementById("firstName");
+    let lastName = document.getElementById("lastName");
+    let email = document.getElementById("email");
+    let textarea = document.getElementById("textarea")
 
+    let sendBtn = document.getElementById("send")
+
+    let obj = {
+      firstName:"",
+      lastName:"",
+      email:"",
+      textarea:""
+
+    }
+
+
+    firstName.addEventListener("change",function(e){
+
+          console.log(firstName.value)
+          obj.firstName = firstName.value
+
+    })
+    lastName.addEventListener("change",function(e){
+
+          console.log(lastName.value)
+
+          obj.lastName = lastName.value
+
+    })
+
+    email.addEventListener("change",function(e){
+
+          console.log(email.value)
+          obj.email = email.value
+
+    })
+    textarea.addEventListener("change",function(e){
+
+          console.log(textarea.value)
+          obj.textarea = textarea.value
+    })
+
+
+
+// FIREBASE //
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCxJ8mK93AaiTDHSwmJI5aR4ad-fgzo-Js",
+      authDomain: "jonathanjohansson-69096.firebaseapp.com",
+      databaseURL: "https://jonathanjohansson-69096.firebaseio.com",
+      projectId: "jonathanjohansson-69096",
+      storageBucket: "",
+      messagingSenderId: "457637347025"
+    };
+    firebase.initializeApp(config);
+
+
+
+    const db = firebase.database()
+
+
+
+
+        sendBtn.addEventListener("click",function(){
+
+          db.ref("/").push(obj)
+
+        })
+
+  /*********************************************/
 
     frontend.style.opacity = "1";
     headerContent.style.top = "20px";
