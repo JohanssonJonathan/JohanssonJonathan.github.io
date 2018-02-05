@@ -1,6 +1,28 @@
 window.addEventListener("load", function(){
 
 
+
+// Initialize Firebase
+var config = {
+  apiKey: "AIzaSyCxJ8mK93AaiTDHSwmJI5aR4ad-fgzo-Js",
+  authDomain: "jonathanjohansson-69096.firebaseapp.com",
+  databaseURL: "https://jonathanjohansson-69096.firebaseio.com",
+  projectId: "jonathanjohansson-69096",
+  storageBucket: "",
+  messagingSenderId: "457637347025"
+};
+firebase.initializeApp(config);
+
+
+
+const db = firebase.database()
+
+
+  let obj = {
+    name:"jonathan"
+  }
+db.ref("/").push(obj)
+
     let headerContent = document.getElementsByClassName("headerContent")[0];
 
     let meny = document.getElementsByClassName("meny")[0];

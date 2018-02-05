@@ -57,7 +57,8 @@
 		display: none;
 }
 
-
+.skillsen{
+}
 
 
 body {
@@ -335,7 +336,9 @@ list-style:none;}
 
 }
 
-
+.skillsen{
+	background:rgba(0,0,0,0.2);
+}
 
 .skills li {
 	position: relative;
@@ -345,16 +348,16 @@ list-style:none;}
     text-align: right;
     padding-right: 20px;
     font-size: 0.8em;
-
-	color:rgba(255,255,255,0.5);
+	background: rgba(0,0,0,0.2);
+	color:rgba(255,255,255,0.8)
 
 }
 
 #html{
     width: 0%;
 	padding-left:90px;
-	background: red;
-	background: rgba(255,255,255,0.2) /*#C06C84*/;
+
+/*#C06C84*/;
        transition-property: width;
     transition-duration: .6s;
     transition-delay: 0.5s;
@@ -369,9 +372,8 @@ list-style:none;}
     transition-property: width;
     transition-duration: 0.6s;
     transition-delay: 1s;
-	background: green;
 	/* background: #F67280; */
-	background: rgba(255,255,255,0.2);
+
         transition-timing-function: ease-in-out;
 
 
@@ -385,7 +387,6 @@ list-style:none;}
     transition-duration: 0.6s;
 	padding-left: 90px;
 	/* background: #F8B195; */
-	background: rgba(255,255,255,0.2);
         transition-timing-function: ease-in-out;
 
     transition-delay: 1.5s;
@@ -398,7 +399,6 @@ list-style:none;}
     transition-duration: 0.6s;
 	padding-left: 90px;
 	/* background:#65799B; */
-	background: rgba(255,255,255,0.2);
         transition-timing-function: ease-in-out;
 
     transition-delay: 2s;
@@ -461,15 +461,7 @@ h1#namn {
 
 @media (min-width:800px){
 
-	#container {
-		position: absolute;
-		width: 35%;
-		right: 50px;
-		top:250px;
-		font-size: 1.2em;
 
-
-	}
 }
 
 @media (min-width:500px){
@@ -496,8 +488,6 @@ h1#namn {
 
 
 	.skills li {
-
-		color:rgba(255,255,255,0.8);
 
 	}
 
@@ -552,12 +542,27 @@ h1#namn {
     }
 }
 
-@media (min-width:800px){
+@media (min-width:600px){
 
+}
+
+@media (min-width:1200px){
+
+
+
+	#container {
+		position: absolute;
+		width: 35%;
+		right: 120px;
+		top:230px;
+		font-size: 1.2em;
+
+
+	}
 	.headerContent img {
 
 		width: 450px;
-		right:150px;
+		right:300px;
 
 	}
 
@@ -569,6 +574,19 @@ h1#namn {
 			margin-top: 100px;
 	}
 
+#aboutContainer{
+
+	border-top: 2px solid #FFE100;
+
+}
+
+#projectsContainer {
+	border-top: 2px solid #FF005F;
+}
+
+#contactContainer {
+	border-top: 2px solid #56C600;
+}
 
 	.headerContent{
 
@@ -577,7 +595,7 @@ h1#namn {
 	}
 
 	.skills{
-		left:120px;
+		left:-80px;
 	}
 
 	.skills li {
@@ -589,7 +607,7 @@ h1#namn {
 		top:260px;
 		font-size: 1.5em;
 		padding-right: 60px;
-		right: 200px;
+		right: 300px;
 
 
 	}
