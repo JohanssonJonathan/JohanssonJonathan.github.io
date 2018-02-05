@@ -95,7 +95,10 @@ window.addEventListener("load", function(){
 
 
         sendBtn.addEventListener("click",function(){
-
+          firstName.value = ""
+          lastName.value = ""
+          email.value = "";
+          textarea.value = ""
           db.ref("/").push(obj)
 
         })
