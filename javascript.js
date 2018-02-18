@@ -24,6 +24,9 @@ window.addEventListener("load", function(){
     let javascript = document.getElementById("javascript")
     let react = document.getElementById("react")
 
+    let sendInfo = document.getElementsByClassName("sendInfo")[0]
+    let body = document.getElementsByTagName("body")[0]
+
     let htmlStar = document.getElementById("star1")
     let cssStar = document.getElementById("star2")
     let javascriptStar = document.getElementById("star3")
@@ -100,8 +103,17 @@ window.addEventListener("load", function(){
           email.value = "";
           textarea.value = ""
           db.ref("/").push(obj)
+          console.log("hsj")
+          sendInfo.style.display = "block";
+          sendInfo.style.zIndex = "200"
+
+
 
         })
+
+          window.addEventListener("click",function(){
+            sendInfo.style.display = "none";
+          })
 
   /*********************************************/
 
@@ -284,7 +296,7 @@ let contactBlock = false;//content syns inte
             aboutBlock = false; //none
             contactBlock = false; // none
             projectsContainer.style.display = "block";
-            container.style.height = "225px";
+            container.style.height = "340px";
             aboutContainer.style.display = "none";
             contactContainer.style.display = "none";
           }else{
