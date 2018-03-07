@@ -9,6 +9,9 @@
 	justify-content: center;
 	position: relative;
 	top:50px;
+	padding:10px;
+	background: rgba(255,255,255,0.7);
+	box-shadow: 0 0px 5px;
 }
 
 .socialamedier img{
@@ -45,61 +48,22 @@
 	padding:20px;
 
 }
-#star1 {
-    position: absolute;
-    top:3px;
-    left:100px;
-    width: 100%;
-    display: block;
-}
-
-#star2 {
-    position: absolute;
-    top:3px;
-    left:100px;
-    width: 100%;
-    display: block;
-}
-
-#star3 {
-    top:3px;
-   position: absolute;
-    left: 100px;
-    width: 100%;
-    display: block;
-}
-
-#star4 {
-    top:3px;
-   position: absolute;
-    left: 100px;
-    width: 100%;
-    display: block;
-}
-
-.fa{
-    color:rgba(255,255,255,0.8);
-    font-size: 1.3em;
-		display: none;
-}
-
-.skillsen{
-}
 
 
 body {
 
-    background: url("Bilder/background.png"); /*url("Bilder/zig zag wool.png")*/
+    background: url("Bilder/bolivia1.png"); /*url("Bilder/zig zag wool.png")*/
 		background-size:cover;
 		background-repeat: no-repeat;
+		background-color: rgba(0,0,0,0.5);
 }
+
 
 .headerContent{
 		position: relative;
     width:160px;
-
     margin: auto;
-	font-size: 0.5em;
+		font-size: 0.6em;
 }
 
 .headerContent img {
@@ -157,14 +121,17 @@ body {
     display: flex;
     margin: auto;
     width:100%;
-        background:rgba(0,0,0,0.1);
     display: ;
-    color:rgba(255,255,255,0.8);
+    color:rgba(255,255,255,0.6);
     margin-bottom: 50px;
     overflow: hidden;
-    height: 100px;
-    transition-property: height;
+    max-height: 0;
+		background: rgba(0,0,0,0.7);
+		padding-bottom: 10px;
+    transition-property: max-height;
     transition-duration: 1s;
+		color:rgba(255,255,255,255.7);
+
 }
 
 
@@ -336,7 +303,7 @@ list-style:none;}
 #projects{
 	padding-right: 130px;
 	background: rgba(0,0,0,0.2); /*#F67280;*/
-        transform: skewX(10deg);
+      transform: skewX(10deg);
     transform-style: background;
      transition: transform;
     transition-duration: 0.4s;
@@ -490,10 +457,15 @@ h1#namn {
 @media (min-width:800px){
 
 
+
 }
 
 @media (min-width:500px){
 
+
+		.skills li {
+			font-size: 1.2em;
+		}
 
 	.headerContent img {
 
@@ -501,8 +473,9 @@ h1#namn {
 
 	}
 
-
-
+	#container{
+		font-size: 1.3em;
+	}
 	.headerContent{
 
 	    width:250px;
@@ -585,6 +558,8 @@ h1#namn {
 		top:60px;
 		justify-content: flex-end;
 		right: 100px;
+		background: rgba(255,255,255,0.0);
+		box-shadow: 0 0px 0px;
 	}
 
 	.socialamedier img {
@@ -604,8 +579,10 @@ h1#namn {
 		position: absolute;
 		width: 35%;
 		right: 120px;
-		top:230px;
-		font-size: 1.2em;
+		top:130px;
+		background: rgba(255,255,255,0.1)
+
+
 
 
 	}
@@ -617,6 +594,7 @@ h1#namn {
 	}
 
 	body{
+
 		margin-top: 50px;
 	}
 
@@ -627,15 +605,21 @@ h1#namn {
 #aboutContainer{
 
 	border-top: 2px solid #FFE100;
+	color:rgba(255,255,255,0.7)
+
 
 }
 
 #projectsContainer {
 	border-top: 2px solid #FF005F;
+	color:rgba(255,255,255,0.7)
+
 }
 
 #contactContainer {
 	border-top: 2px solid #56C600;
+	color:rgba(255,255,255,0.7)
+
 }
 
 	.headerContent{

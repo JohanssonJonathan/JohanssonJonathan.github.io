@@ -186,7 +186,6 @@ function Screen(val1, val2, val3){
 
     })
 
-
 //*************************************************
 //*************** CLICK PÅ ABOUT, PROJECTS och CONTACT *****************************
 //***********************************************
@@ -229,7 +228,8 @@ let contactBlock = false;//content syns inte
           contact.style.background =" rgba(0,0,0,0.2)"
 
           if(aboutBlock){
-              container.style.height = "0";
+              container.style.maxHeight = "0";
+              container.style.paddingBottom = "0"
               aboutBlock = false;
 
           }else{
@@ -248,7 +248,9 @@ let contactBlock = false;//content syns inte
 
 
                 if(projectsBlock){
-                   container.style.height = "0";
+                   container.style.maxHeight = "0";
+                   container.style.paddingBottom = "0"
+
                    projectsBlock = false;
                }else{
                    blockBool()
@@ -263,7 +265,9 @@ let contactBlock = false;//content syns inte
               about.style.background =" rgba(0,0,0,0.2)"
 
               if(contactBlock){
-                  container.style.height = "0";
+                  container.style.maxHeight = "0";
+                  container.style.paddingBottom = "0"
+
                  contactBlock = false
 
 
@@ -278,7 +282,7 @@ let contactBlock = false;//content syns inte
 
 
 
-
+blockBool()
 
         function blockBool(){
           if(sida === 1){
@@ -286,7 +290,10 @@ let contactBlock = false;//content syns inte
             projectsBlock = false; // block
             contactBlock = false; // none
             aboutContainer.style.display = "block";
-            container.style.height = "";
+            container.style.maxHeight = "400px";
+            container.style.paddingBottom = "20px"
+
+            console.log(container.style.maxHeight)
             projectsContainer.style.display = "none";
             contactContainer.style.display = "none";
 
@@ -296,7 +303,9 @@ let contactBlock = false;//content syns inte
             aboutBlock = false; //none
             contactBlock = false; // none
             projectsContainer.style.display = "block";
-            container.style.height = "340px";
+            container.style.maxHeight = "400px";
+            container.style.paddingBottom = "20px"
+
             aboutContainer.style.display = "none";
             contactContainer.style.display = "none";
           }else{
@@ -304,7 +313,9 @@ let contactBlock = false;//content syns inte
              aboutBlock = false; // none
             projectsBlock = false; // none
             contactContainer.style.display = "block";
-            container.style.height = "305px";
+            container.style.maxHeight = "400px";
+            container.style.paddingBottom = "20px"
+
             aboutContainer.style.display = "none";
             projectsContainer.style.display = "none";
           }
